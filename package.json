@@ -1,6 +1,7 @@
 {
   "name": "@nexus-switchboard/nexus-mod-liveness",
   "version": "0.0.1",
+  "keywords": ["nexus-module"],
   "description": "Exposes a simple healthcheck endpoint in Nexus.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
