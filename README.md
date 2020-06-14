@@ -1,20 +1,21 @@
 # Nexus Module - Liveness
 
-Nexus is a framework for connecting different livenesss together that is made up of modules and connections.  This repo
-is a module dedicated to providing a slack-based interface to Jira for accepting requests and transitioning them through the 
- lifecycle of the project with which it is connected.
+Simple  module that implements only one endpoint which can be used as a healthcheck for infrastructure liveness checks.
 
-For full documentation on how to use this, visit the the [Nexus documentation here](https://nexus-switchboard.dev/content/modules/liveness)
+# Features
 
-## Development
+Exposes a route at a static GET endpoint that can be queried by your health checker. 
 
-To make changes to this repo, fork and clone into a directory.  Then:
+# How It Works
 
-1. `npm install`
-2. `npm run build`
-3. `npm link`
+This is the absolute simplest possible module.  Just by installing the module there will be a GET endpoint available at:
 
-The last step hooks your local npm cache to this project instead of pulling from the public NPM registry.   That way, in the project that uses this package, you can run (in the *other* project's directory, not this one):
+    https://<your-domain>/<your-nexus-root>/m/liveness/up
 
-`npm link @nexus-switchboard/nexus-mod-liveness`
-
+The output from this endpoint if everything is working correctly is:
+ 
+ ```json
+    {
+        "message": "up"
+    }    
+```
