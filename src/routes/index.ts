@@ -1,5 +1,5 @@
 import {Request, Response} from "express";
-import {IRouteDefinition} from "@nexus-switchboard/nexus-extend";
+import {IRouteDefinition} from "@nexus-switchboard/nexus-core";
 
 export const routes: IRouteDefinition[] = [{
     method: "get",

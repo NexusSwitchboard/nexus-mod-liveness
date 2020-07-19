@@ -1,4 +1,4 @@
-import {IRouteDefinition, NexusModule, ModuleConfig} from "@nexus-switchboard/nexus-extend";
+import {IRouteDefinition, NexusModule, ModuleConfig} from "@nexus-switchboard/nexus-core";
 import {routes} from "./routes";
 
 export class LivenessModule extends NexusModule {
